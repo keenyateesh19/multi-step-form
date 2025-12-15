@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import PersonalInfo from "./components/PersonalInfo";
 import MultiStep from "./layouts/MultiStepForm";
-import SelectPlan from "./components/SelectPlan";
-import AddOns from "./components/AddOns";
-import Summary from "./components/Summary";
+import PersonalInfo from "./pages/PersonalInfo";
+import SelectPlan from "./pages/SelectPlan";
+import AddOns from "./pages/AddOns";
+import Summary from "./pages/Summary";
 
 function App() {
   return (
