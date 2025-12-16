@@ -1,9 +1,9 @@
-import type { UseFormRegisterReturn } from "react-hook-form";
+import { type UseFormRegisterReturn } from "react-hook-form";
 import type { PersonalInfoFields } from "../pages/PersonalInfo";
 
 export interface TextInputProps {
   name: keyof PersonalInfoFields;
-  label: string; // Add separate label prop
+  label: string;
   errorTxt?: string;
   placeholder?: string;
   register?: UseFormRegisterReturn;
@@ -16,6 +16,8 @@ const TextInput = ({
   placeholder,
   register,
 }: TextInputProps) => {
+
+
   return (
     <div className="flex flex-col">
       <div className="flex justify-between">
@@ -29,7 +31,6 @@ const TextInput = ({
       <input
         {...register}
         type="text"
-        name={name}
         id={name}
         className={`${
           errorTxt ? "outline-red-500" : "outline-purple-200"

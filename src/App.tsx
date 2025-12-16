@@ -5,17 +5,20 @@ import PersonalInfo from "./pages/PersonalInfo";
 import SelectPlan from "./pages/SelectPlan";
 import AddOns from "./pages/AddOns";
 import Summary from "./pages/Summary";
+import { MultiStepFormProvider } from "./context/MultiStepFormContext";
 
 function App() {
   return (
-    <Routes>
-      <Route element={<MultiStep />}>
-        <Route path="onboarding" element={<PersonalInfo />} />
-        <Route path="select-plan" element={<SelectPlan />} />
-        <Route path="add-ons" element={<AddOns />} />
-        <Route path="summary" element={<Summary />} />
-      </Route>
-    </Routes>
+    <MultiStepFormProvider>
+      <Routes>
+        <Route element={<MultiStep />}>
+          <Route path="onboarding" element={<PersonalInfo />} />
+          <Route path="select-plan" element={<SelectPlan />} />
+          <Route path="add-ons" element={<AddOns />} />
+          <Route path="summary" element={<Summary />} />
+        </Route>
+      </Routes>
+    </MultiStepFormProvider>
   );
 }
 
