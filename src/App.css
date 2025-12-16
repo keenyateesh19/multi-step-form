@@ -4,3 +4,9 @@
 @theme {
     --font-body: "Ubuntu", sans-serif;
 }
+
+@layer base {
+    body {
+        @apply bg-blue-50 lg:bg-white;
+    }
+}

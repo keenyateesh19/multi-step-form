@@ -3,9 +3,9 @@ import SideBar from "../components/SiderBar";
 
 const MultiStepForm = () => {
   return (
-    <div className="max-w-full min-h-svh flex flex-col lg:flex-row lg:p-4">
+    <div className="max-w-full min-h-svh flex flex-col relative lg:flex-row lg:p-4">
       <SideBar />
-      <div className="bg-amber-500 p-4 lg:flex-1">
+      <div className="lg:p-12 lg:flex-1 relative flex justify-center">
         <Outlet />
       </div>
     </div>
